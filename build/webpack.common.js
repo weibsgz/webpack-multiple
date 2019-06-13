@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pageConfig = require('../page.config.js');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const webpack = require('webpack')
+const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin')
 const formatCssTemplate = function (data) {
     var str = '';
     for (let item of data.sprites) {
@@ -73,7 +74,30 @@ const config = {
             }
         ]
     },
-       
+    optimization:{
+         splitChunks: {
+          chunks: 'all',
+          minSize: 30000,
+          maxSize: 0,
+          minChunks: 1,
+          maxAsyncRequests: 5,
+          maxInitialRequests: 3,
+          automaticNameDelimiter: '~',
+          name: true, 
+          cacheGroups: {             
+            vendors: {
+              test: /[\\/]node_modules[\\/]/,
+              priority: -10,
+              name: 'vendor'
+            },
+            default: { 
+              minChunks: 2,
+              priority: -20,
+              reuseExistingChunk: true
+            }
+          }
+        }    
+    } 
 }
 
 const makePlugins = (config) => {
@@ -96,7 +120,7 @@ const makePlugins = (config) => {
                     template: path.resolve(__dirname, `../src/pages/${page.html}`),
                     filename: `${page.name}.html`,
                     minify: false,
-                    chunks: [page.name] //对应要引入的文件
+                    chunks: ['vendor',page.name] //对应要引入的文件
                 }));
         })
     }
@@ -126,7 +150,6 @@ const makePlugins = (config) => {
             }
         })
     )
-
     return plugins;
 }
 

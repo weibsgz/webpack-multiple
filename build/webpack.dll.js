@@ -8,11 +8,11 @@ const webpack = require('webpack')
 module.exports = {
     mode:'production',
     entry:{
-        vendors:['jquery','lodash']
+        vendors:['lodash']
     },
     output:{
         filename:'[name].dll.js',
-        path:path.resolve(__dirname,'../dll'),
+        path:path.resolve(__dirname,'/dist/dll'),
         //暴露文件名
         library:'[name]'
     },
@@ -21,7 +21,7 @@ module.exports = {
         //node_modules里引入了
         new webpack.DllPlugin({
           name: '[name]',
-          path:path.resolve(__dirname, '../dll/[name].manifest.json')
+          path:path.resolve(__dirname, '/dist/dll/[name].manifest.json')
         })
     ]
 }

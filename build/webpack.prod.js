@@ -16,7 +16,7 @@ const productConfig = {
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
-    //publicPath: 'http://asserts.xcarimg.com/resource/XXX/', //加入CDN的域名
+   // publicPath: 'http://asserts.xcarimg.com/resource/XXX/', //加入CDN的域名
   },
 
   optimization: {
