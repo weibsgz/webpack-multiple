@@ -1,0 +1,14 @@
+.icon-s1{
+        background-image: url('sprite.png');
+        background-position: -26px 0px;
+        background-size: 39px 26px;
+        width: 13px ;
+        height: 13px;
+      }
+.icon-s2{
+        background-image: url('sprite.png');
+        background-position: 0px 0px;
+        background-size: 39px 26px;
+        width: 26px ;
+        height: 26px;
+      }
