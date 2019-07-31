@@ -2,7 +2,6 @@ const merge = require('webpack-merge')
 const commonConfig = require('./webpack.common.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const productConfig = {
   mode: 'production', //production打包出来压缩 development不压缩
@@ -14,8 +13,8 @@ const productConfig = {
   //module 只查找业务代码，不会查找loader里的错误
 
   output: {
-    filename: '[name].js',
-    chunkFilename: '[name].chunk.js',
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[name].chunk.js',
    // publicPath: 'http://asserts.xcarimg.com/resource/XXX/', //加入CDN的域名
   },
 
@@ -63,7 +62,7 @@ const productConfig = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename:'[name].css',
       chunkFilename: '[name].chunk.css',
     })
 

@@ -3,8 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pageConfig = require('../page.config.js');
 const SpritesmithPlugin = require('webpack-spritesmith');
-const webpack = require('webpack')
-const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin')
 const formatCssTemplate = function (data) {
     var str = '';
     for (let item of data.sprites) {
@@ -34,7 +32,8 @@ const config = {
         }
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.(png|jpg|gif)$/,
                 use: [{
                     loader: 'url-loader',
@@ -58,10 +57,22 @@ const config = {
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },
+
+       
+            // {
+            //     test: /\.(tpl|ejs)$/,
+            //     use: 'ejs-loader'
+            // },
+
             {
-                test: /\.(tpl|ejs)$/,
-                use: 'ejs-loader'
+                test: /\.art$/,
+                loader: "art-template-loader",
+                options: {
+                    // art-template options (if necessary)
+                    // @see https://github.com/aui/art-template
+                }
             },
+
             // html中的img标签
             {
                 test: /\.html$/,
@@ -113,8 +124,6 @@ const makePlugins = (config) => {
     if (pageConfig && Array.isArray(pageConfig)) {
         pageConfig.map(page => {
             config.entry[page.name] = path.resolve(__dirname, `../src/pages/${page.jsEntry}`)
-            config.output
-
             plugins.push(
                 new HtmlWebpackPlugin({
                     template: path.resolve(__dirname, `../src/pages/${page.html}`),
@@ -147,6 +156,10 @@ const makePlugins = (config) => {
             },
             apiOptions: {
                 cssImageRef: "sprite.png"
+            },
+            spritesmithOptions: {
+                algorithm: 'top-down', // 从上到下生成方向.
+                padding: 2// 每个小图标之间的间隙
             }
         })
     )

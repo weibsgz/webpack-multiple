@@ -1,0 +1,158 @@
+<link href="//asserts.xcarimg.com/resource/common/header/channel_nav_utf.css?v=201903141400" rel="stylesheet"
+  type="text/css" />
+
+<!--header-->
+
+<!-- login-->
+
+<div class="Header_bg" id="totop">
+
+  <div class="Header"> <a href="http://www.xcar.com.cn/" title="爱卡汽车" class="Hlogo"></a>
+
+    <div class="mmp menubox fr">
+
+      <div class="menutb"> <span class="iphone">手机爱卡</span> </div>
+
+      <div class="mmp_show"> <a href="http://app.xcar.com.cn/wap.htm" target="_blank" class="wap">触屏版</a> <a
+          href="http://app.xcar.com.cn/xcar.htm" target="_blank" class="xcar">爱卡汽车</a> <a
+          href="http://app.xcar.com.cn/carfinder.htm" target="_blank" class="carfinder">爱买车</a><span
+          class="weixin">爱卡微信<i></i></span> </div>
+
+    </div>
+
+    <!-- 论坛导航部分开始 -->
+
+    <div class="mbbs menubox fr" rel="xheaderbbsnavBox">
+
+      <div class="menutb">论坛导航</div>
+
+      <div class="mbbs_show" id="xheaderbbsNav">
+
+        <iframe scrolling="no" frameborder="0" style="width: 822px;" class="nav_daohang" id="daohang" name="daohang"
+          marginheight="0" marginwidth="0" border="0" target="_blank" height="552px"></iframe>
+
+      </div>
+
+    </div>
+
+    <!-- 论坛导航部分结束 -->
+    <div id="xheaderMessage" class="menubox fr"></div>
+    <!-- 车市导航部分开始 -->
+
+    <div class="mcs menubox fl" rel="xheaderchishi">
+
+      <div class="menutb" id="xHeaderIplocation"><a href="http://bj.xcar.com.cn/" target="_blank">北京车市</a></div>
+
+      <div class="mcs_show" id="xheadcsdaohang">
+
+        <iframe scrolling="no" frameborder="0" height="171px" style="width: 702px;" id="csdaohang" name="csdaohang"
+          marginheight="0" marginwidth="0" border="0" target="_blank"></iframe>
+
+      </div>
+
+    </div>
+
+    <!-- 车市导航部分结束 -->
+
+
+
+    <div id="xloginBtn" style="display:none;float:right;height:30px;"></div>
+
+
+
+    <div id="xlogininfo" class="muser menubox fr" style=""></div>
+
+  </div>
+
+</div>
+
+<!-- login end -->
+
+<div class="Headnav_bg">
+
+  <div class="Headnav">
+
+    <div class="Hnav_choose">
+
+      <ul>
+
+        <li class="tit"><a href="http://newcar.xcar.com.cn/" onclick="clicklog('123948','','');">选车</a></li>
+
+        <li><a href="http://info.xcar.com.cn/" onclick="clicklog('123949','','');">新车</a></li>
+
+        <li><a href="http://info.xcar.com.cn/guide/" onclick="clicklog('123950','','');">导购</a>&#8226;<a
+            href="http://drive.xcar.com.cn/" onclick="clicklog('123951','','');">试驾</a></li>
+
+        <li><a href="http://newcar.xcar.com.cn/photo/" onclick="clicklog('123952','','');">车图</a></li>
+
+        <li><a href="http://suv.xcar.com.cn/" onclick="clicklog('123955','','');">SUV</a></li>
+
+      </ul>
+
+    </div>
+
+    <div class="Hnav_buy">
+
+      <ul>
+
+        <li class="tit"><a href="http://newcar.xcar.com.cn/buy/" onclick="clicklog('123956','','');">买车</a> </li>
+
+        <li><a href="http://price.xcar.com.cn/" onclick="clicklog('123957','','');">报价</a> </li>
+
+        <li><a href="http://dealer.xcar.com.cn/" onclick="clicklog('123958','','');">经销商</a> </li>
+
+        <li><a href="http://mall.xcar.com.cn/sale" onclick="clicklog('123959','','');">车有惠</a> </li>
+
+        <li><a href="http://used.xcar.com.cn/" onclick="clicklog('123960','','');">二手车</a> </li>
+
+      </ul>
+
+    </div>
+
+    <div class="Hnav_use cwy_Hnav_use">
+
+      <ul>
+
+        <li class="tit"><a href="http://yp.xcar.com.cn/" onclick="clicklog('123961','','');">用车</a></li>
+
+        <li><a href="http://mall.xcar.com.cn" onclick="clicklog('123963','','');">商城</a></li>
+
+      </ul>
+
+    </div>
+
+    <div class="Hnav_inte cwy_Hnav_inte">
+
+      <ul>
+
+        <li class="tit"><a href="http://club.xcar.com.cn/" onclick="clicklog('123964','','');">社区</a><i class="H_news"
+            style="display:none"></i></li>
+
+        <li><a href="http://club.xcar.com.cn/xbb/" target="_blank" onclick="clicklog('124907','','');"
+            style="position:relative;">XBB</a></li>
+
+        <li><a href="http://my.xcar.com.cn/thread/hot.htm" target="_blank" onclick="clicklog('123965','','');">热帖</a>
+        </li>
+
+        <li><a href="http://club.xcar.com.cn/selected/" target="_blank" onclick="clicklog('123966','','');">精选</a> </li>
+
+      </ul>
+
+    </div>
+
+    <div class="Hnav_found">
+
+      <ul>
+
+        <li class="tit"><a href="http://culture.xcar.com.cn" onclick="clicklog('126518','','');">文化</a></li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="//asserts.xcarimg.com/resource/common/jquery-1.8.3.min.js"></script>

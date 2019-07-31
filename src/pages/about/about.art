@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script type="text/javascript" src="http://asserts.xcarimg.com/resource/common/jquery-1.8.3.min.js"></script>
   <style>
-  img{
-    width: 200px;
-  }
+    
+    #templateDiv{
+    font-size:20px;  }
   </style>
 </head>
+
 <body>
   about 页面
 
-  如果你的图片是直接在html里面引入的话，可以用相对路径，如下所示：
-  <img src='../../img/test.png' />
+  <div id="testDIV">
+ 
+  </div>
+  
 </body>
+
 </html>

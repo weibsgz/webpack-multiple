@@ -1,11 +1,11 @@
 module.exports = [{
     name: 'index',
-    html: 'home/index.ejs',
+    html: 'home/index.art',
     jsEntry: 'home/index.js'
   },
   {
     name: 'about',
-    html: 'about/about.ejs',
+    html: 'about/about.art',
     jsEntry: 'about/about.js'
   }
 ]

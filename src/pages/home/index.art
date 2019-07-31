@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="http://asserts.xcarimg.com/resource/common/jquery-1.8.3.min.js"></script>
+</head>
+
+<body> 
+  {{include '../../components/header/header.art'}}
+
+  {{include '../../components/layout1/layout1.art'}}
+  
+  这里是主页，
+  测试雪碧图
+  <i class="icon-s2"></i>
+  // 两种图片引入方法
+  <img style="margin-right:50px" src="<%= require('../../img/test.png') %>" />
+  <img style="margin-right:50px" src="../../img/test.png" />
+
+  <a href="./about.html">关于我们</a>
+  <div id="test1" class="test">css测试</div>
+
+  <div id="testDIV"></div>
+  <div id="testDIV2"></div>
+
+
+   {{include '../../components/layout2/layout2.art'}}
+   {{include '../../components/footer/footer.art'}}
+</body>
+
+</html>
