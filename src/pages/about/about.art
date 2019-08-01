@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script type="text/javascript" src="http://asserts.xcarimg.com/resource/common/jquery-1.8.3.min.js"></script>
   <style>
     
     #templateDiv{
@@ -15,12 +14,13 @@
 </head>
 
 <body>
+  {{include '../../components/header/header.art'}}
   about 页面
 
   <div id="testDIV">
  
   </div>
-  
+  {{include '../../components/footer/footer.art'}}
 </body>
 
 </html>

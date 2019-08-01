@@ -1,0 +1,15 @@
+ <ul class="ul_template">
+      <li>姓名{{name}}</li>
+      <li>年龄{{age}}</li>
+      <li>电话{{phone}}</li>
+</ul>
+
+//这里貌似没法写SCSS语法
+<style>
+ul.ul_template {
+    color:green;   
+}
+</style>
+
+
+

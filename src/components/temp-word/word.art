@@ -1,0 +1,7 @@
+<div class="word">{{value}}</div>
+
+<style>
+    .word{
+        color: red;    
+     }
+</style>

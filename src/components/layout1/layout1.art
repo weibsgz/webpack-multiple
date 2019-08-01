@@ -1,5 +1,5 @@
 <div class="header" id="header">
-   <h1>this is header123</h1>
+   <h1>{{data}}</h1>
 </div>
 
 <style>

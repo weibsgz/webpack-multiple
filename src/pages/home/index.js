@@ -1,3 +1,4 @@
+
 import 'css/common.scss';
 import './index.scss'
 import '../../spritesmith-generated/sprite.css'
@@ -5,31 +6,53 @@ import '../../spritesmith-generated/sprite.css'
 import 'components/layout2/layout2.js' // 底部组件
 
 import {
-    methods1
+    methods1,api
 } from 'js/util.js'
-import templateList from '../../components/template/list.art'
-import temlateWord from '../../components/template/word.art'
+
+import {$ele} from 'components/temp-list/list.js'
+import {$word} from 'components/temp-word/word.js'
+
 console.log('这是首页的Js')
 
 
 $(function () {
-    $(".test").text('jquery给改了')
+    // $(".test").text('jquery给改了')
 
-    var data1 = {
-        name:"Ray",
-        age:"18",
-        phone:"18233989613"
-    };
-
-    var data2 = {
-        value:'测试文字'
+   
+    setTimeout(() => {
+        console.log('测试箭头函数')
+    }, 200)
+    class TestClass {
+        constructor(str) {
+            this.str = str
+        }
+        print() {
+            console.log(this.str)
+        }
     }
-    var html = templateList(data1);
-    var html2 = temlateWord(data2);
+
+    var a = new TestClass('测试class类')
+    a.print()
 
 
-    $("#testDIV").html(html)
-    $("#testDIV2").html(html2)
+    var res = Promise.resolve(1);
+    res.then(item=>{
+        console.log(`${item} 测试promise`)
+    })
+
+
+    $("#testDIV").html($ele)
+
+    $("#testDIV2").html($word)
+
+    api.get('/',{a:1}).then(res=>{
+        console.log(res)
+    })
+
+    let obj1 = {a:1}
+    let obj2 = {b:2}
+    let c = Object.assign({},obj1,obj2);
+    console.log(c)
 
 })
 

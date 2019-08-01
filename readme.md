@@ -11,9 +11,9 @@ npm run dev
 npm run build
 
 ```
+支持IE9+
 
-
-### webpack多页面打包 基础配置，可拷贝，不要随意修改！如要修改沟通 魏彬
+### webpack多页面打包 基础配置，可拷贝重新建立项目文件夹，不要随意修改原始仓库！如要修改沟通 魏彬
 ### 已包含各种demo （多页面配置，css,js使用 art-template使用 雪碧图使用等等）
 ### 生产环境交付后端前请先配置publicPath,配合HOST 和 NGINX指向本地
 
@@ -44,4 +44,12 @@ npm run build
 
 
 ### art-template规则
-使用art-template 请参考index.art
+include 方式 主要为了引入代码片段，可以传入一些死数据
+导入.art模板可以做数据渲染
+
+因为我们要弄成组件化
+index.art里边导入list.art是按组件整体导出，包含HTML JS CSS 在自己的业务用直接装入HTML中
+about.art里边导入list.art是只导出模板和样式  JS需要在自己业务中实现
+
+发现一篇好文章
+https://juejin.im/post/5d13889a6fb9a07efd471d7f

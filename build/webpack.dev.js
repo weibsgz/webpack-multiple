@@ -21,6 +21,7 @@ const devConfig = {
         contentBase: path.join(__dirname, 'dist'), //再哪个文件夹下启动服务
         open: false,
         hot: true,
+        disableHostCheck: true, // 防止IE报错
         port: 8765
     },
     module: {

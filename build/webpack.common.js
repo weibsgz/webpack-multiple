@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pageConfig = require('../page.config.js');
 const SpritesmithPlugin = require('webpack-spritesmith');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const formatCssTemplate = function (data) {
     var str = '';
     for (let item of data.sprites) {
@@ -86,6 +87,11 @@ const config = {
         ]
     },
     optimization:{
+        minimizer: [new UglifyJsPlugin({
+            uglifyOptions: {
+              ie8: true
+            }
+          })],
          splitChunks: {
           chunks: 'all',
           minSize: 30000,
